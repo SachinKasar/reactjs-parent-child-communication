@@ -3,8 +3,8 @@ import React from "react";
 // FourWheel as a stateless Component
 export const FourWheeler = (props) => {
     return ( 
-		 <div className="container">
-			<div className="row">
+		  <div className="container" style={{border: '1px solid grey'}}>
+			<div className="container">
 				<div className="row">
 					<h1 style={{color:'red'}}> Four Wheeler </h1>
 					<ul>
