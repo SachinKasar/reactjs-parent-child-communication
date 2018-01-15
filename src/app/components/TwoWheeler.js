@@ -25,8 +25,8 @@ export class TwoWheeler extends React.Component {
 	
     render() {
         return ( 
-		    <div className="container">
-                <div className="row">
+		    <div className="container" style={{border: '1px solid grey'}}>
+			     <div className="container">
 				    <div className="row">
 						<h1 style={{color:'blue'}}> Two Wheeler </h1>
 						<ul>
@@ -46,9 +46,18 @@ export class TwoWheeler extends React.Component {
 							
 						</ul>
 						<div className="btn-group btn-group-sm">
-							<button onClick={this.handleOnClick} className="btn btn-primary" >Get New Price</button>
-							<button onClick={this.props.greet} className="btn btn-primary" >Greet Customer</button>
-							<button onClick={this.handleOnClickVisitor} className="btn btn-primary" >Recent Visitor</button>
+							<button 
+                                style={{margin:'10px 10px 10px 10px'}} 
+                                onClick={this.handleOnClick} 
+                                className="btn btn-primary" >Get New Price</button>
+							<button 
+                                style={{margin:'10px 10px 10px 10px'}} 
+                                onClick={this.props.greet} 
+                                className="btn btn-primary" >Greet Customer</button>
+							<button 
+                                style={{margin:'10px 10px 10px 10px'}} 
+                                onClick={this.handleOnClickVisitor} 
+                                className="btn btn-primary" >Recent Visitor</button>
 						</div>
 					</div>
 				</div>
@@ -57,3 +66,4 @@ export class TwoWheeler extends React.Component {
         );
     } 
 }
+
