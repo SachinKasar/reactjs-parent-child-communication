@@ -36,7 +36,7 @@ class App extends React.Component {
 							<TwoWheeler 
 							       name="Enfield Classic" 
 								   specs={twoWheelSpecs} 
-								   price="0"  
+								   price={0}  
 								   greet={this.greetCustomer} 
 								   visitor={this.state.visitor}
 								   changeVisitor={this.handleVisitor}/>
