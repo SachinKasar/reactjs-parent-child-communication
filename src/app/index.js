@@ -34,12 +34,17 @@ class App extends React.Component {
                     <div className="row">
                       <div className="col-xs-10 col-xs-offset-1" >
 							<TwoWheeler 
-							       name="Enfield Classic" 
-								   specs={twoWheelSpecs} 
-								   price={0}  
-								   greet={this.greetCustomer} 
-								   visitor={this.state.visitor}
-								   changeVisitor={this.handleVisitor}/>
+							           name={"Enfield Classic"}  
+                                       specs={twoWheelSpecs} 
+								       price={0}   
+                                       greet={this.greetCustomer} 
+								       visitor={this.state.visitor} 
+                                       changeVisitor={this.handleVisitor}
+                            >
+            
+                                <div><p style={{color:'purple'}}>This is Two Weeeler child component</p><br/></div>
+            
+                            </TwoWheeler>
 						</div>
 					</div> <br/>
             
