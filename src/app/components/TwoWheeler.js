@@ -1,5 +1,6 @@
 import React from "react";
 import {render} from "react-dom";
+import PropTypes from 'prop-types';
 
 // TwoWheel as a Class Component
 export class TwoWheeler extends React.Component {
@@ -63,4 +64,16 @@ export class TwoWheeler extends React.Component {
         );
     } 
 }
+
+TwoWheeler.propTypes = {
+    name: PropTypes.string,
+    specs: PropTypes.object,
+    price: PropTypes.number,
+};
+
+TwoWheeler.defaultProps = {
+  name: 'Default Name',
+  specs: {manufacturer : "Default Manufacturer Name"},
+    price:10
+};
 
