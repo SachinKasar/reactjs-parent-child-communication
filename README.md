@@ -12,6 +12,7 @@ Component communication
 6. PropTypes and defaultProps - TwoWheeler Component
       - Typechecking using PropTypes (package npm prop-types) - e.g. in index.js - > change price from {0} to {"0"}.
       - DefaultProps : How default props values getting used if no value provided. e.g. remove props price from <TwoWheeler> usage.
+7. Children, isRequired, default func etc.
 
 
 
