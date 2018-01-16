@@ -29,23 +29,22 @@ class App extends React.Component {
 		
         return ( 
 			<div className="container">
-				 <div>
-					<div className="row">
-						<div className="row">
+                <div className="row col-xs-10 col-xs-offset-1 alert alert-success">
+				    <br/>   
+                    <div className="row">
+                      <div className="col-xs-10 col-xs-offset-1" >
 							<TwoWheeler 
 							       name="Enfield Classic" 
 								   specs={twoWheelSpecs} 
-								   price="0" ariom
+								   price="0"  
 								   greet={this.greetCustomer} 
 								   visitor={this.state.visitor}
 								   changeVisitor={this.handleVisitor}/>
 						</div>
-					</div>
-				  </div>
-			  <br/>
-				  <div>
-					<div className="row">
-						<div className="row">
+					</div> <br/>
+            
+				   <div className="row">
+                      <div className="col-xs-10 col-xs-offset-1" >
 							<FourWheeler 
 								name="Grand Vitara" 
 								specs={fourWheelSpecs} 
@@ -53,7 +52,7 @@ class App extends React.Component {
 						</div>
 					</div>
 				  </div>
-			  </div>
+            </div>
         );
     } 
 }
