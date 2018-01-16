@@ -6,16 +6,16 @@ import PropTypes from 'prop-types';
 export class TwoWheeler extends React.Component {
 	constructor(props) {
 		super();
-	    //this.price = props.price;
-		this.state = {price:props.price, visitor:'Visitor 2'}
+	    this.price = props.price;
+		//this.state = {price:props.price, visitor:'Visitor 2'}
 		this.handleOnClick = this.handleOnClick.bind(this);
 		this.handleOnClickVisitor = this.handleOnClickVisitor.bind(this);
 	}
 	
 	handleOnClick() {
-		// this.price = "Rs.100000";
-		this.setState({price:'Rs. 100000'});
-		console.log('New Price');
+        this.price += 100000;
+        console.log('New Price', this.price);
+		//this.setState( { price: this.state.price + 100000});
 	}
 	
 	handleOnClickVisitor() {
@@ -38,7 +38,7 @@ export class TwoWheeler extends React.Component {
 							</li>
 							
 							<li>
-								<b>Price :</b> {this.state.price}
+								<b>Price :</b> {this.price}
 							</li>
 							<li>
 							     <b>Visitor :</b>  {this.props.visitor}
