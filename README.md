@@ -9,6 +9,9 @@ Component communication
      - why only props setter doe not works.  
 4. State uplifting to parent - a reccommended practice.
 5. Invoking events defined in parent component for state change. 
+6. PropTypes and defaultProps - TwoWheeler Component
+      - Typechecking using PropTypes (package npm prop-types) - e.g. in index.js - > change price from {0} to {"0"}.
+      - DefaultProps : How default props values getting used if no value provided. e.g. remove props price from <TwoWheeler> usage.
 
 
 
