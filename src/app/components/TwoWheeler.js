@@ -28,6 +28,7 @@ export class TwoWheeler extends React.Component {
         return ( 
 		    <div  className="alert alert-warning" >
 						<h1 style={{color:'blue'}}> Two Wheeler </h1>
+                         {this.props.children}
 						<ul>
 							<li>
 								<b>Name :</b> {this.props.name}
@@ -69,11 +70,14 @@ TwoWheeler.propTypes = {
     name: PropTypes.string,
     specs: PropTypes.object,
     price: PropTypes.number,
+    children:PropTypes.element.isRequired,
+    greet:PropTypes.func
 };
 
 TwoWheeler.defaultProps = {
   name: 'Default Name',
   specs: {manufacturer : "Default Manufacturer Name"},
-    price:10
+  price:10,
+   greet:function() { alert('default func')} 
 };
 
