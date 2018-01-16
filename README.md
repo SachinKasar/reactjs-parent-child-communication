@@ -2,8 +2,11 @@
 
 Component communication
 
-1. Communication by state mutation
-2. Passing state as props 
+1. Pass dynamic value to child component using Props.
+2. State, setState - Updated compoenent's state.
+3. setState() - render() auto call.
+4. State uplifting to parent - a reccommended practice.
+5. Invoking events defined in parent component for state change. 
 
 
 
