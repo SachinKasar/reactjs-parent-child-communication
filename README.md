@@ -13,6 +13,8 @@ Component communication
       - Typechecking using PropTypes (package npm prop-types) - e.g. in index.js - > change price from {0} to {"0"}.
       - DefaultProps : How default props values getting used if no value provided. e.g. remove props price from <TwoWheeler> usage.
 7. Children, isRequired, default func etc.
+8. Event handling      
+9. Concept of Virtual DOM - Chrome's -> Render - paint
 
 
 
