@@ -2,6 +2,7 @@
 
 Component communication - State
 
+<<<<<<< HEAD
 
 1. State, setState - Updated component's state.
 2. setState() - render() auto call.
@@ -23,6 +24,7 @@ Some basics to observe
 - State change happens through setState().
 - TwoWheeler changing its own state using handleOnCLickPrice().
 - TwoWheeler initiate a state change in parent App and then receive change as in props.
+ 
 
 
 
