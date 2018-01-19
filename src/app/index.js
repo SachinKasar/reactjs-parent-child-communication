@@ -13,39 +13,39 @@ class App extends React.Component {
 		this.handleVisitor = this.handleVisitor.bind(this);
 	}
 	
-	greetCustomer() {
-		alert("Hello");		
-	}
+	 
 	
 	handleVisitor(name) {
+        console.log('Inside App ->  handleVisitor() ' );
 		this.setState({
 			visitor:name
 		});		
 	}
 	
     render() {
+        console.log(' Inside App ->  render() ' );
+                    
 		let twoWheelSpecs = {manufacturer : "Royal Enfield"};
 		let fourWheelSpecs = {manufacturer : "Maruti Suzuki"};
-		
+		// this.setState({
+		//	visitor:'sasas'
+		// });	
+        
         return ( 
 			<div className="container">
                 <div className="row col-xs-10 col-xs-offset-1 alert alert-success">
+                    {this.state.visitor}
 				    <br/>   
                     <div className="row">
                       <div className="col-xs-10 col-xs-offset-1" >
 							<TwoWheeler 
 							           name={"Enfield Classic"}  
                                        specs={twoWheelSpecs} 
-								       price={0}   
-                                       greet={this.greetCustomer} 
-								       visitor={this.state.visitor} 
+								       firstPrice={0}   
+                                       visitor={this.state.visitor} 
                                        changeVisitor={this.handleVisitor}
-                            >
-            
-                                <div><p style={{color:'purple'}}>This is Two Weeeler child component</p><br/></div>
-            
-                            </TwoWheeler>
-						</div>
+                            />
+                    </div>
 					</div> <br/>
             
 				   <div className="row">

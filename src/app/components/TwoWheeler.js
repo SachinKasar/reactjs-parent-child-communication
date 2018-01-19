@@ -6,25 +6,31 @@ import PropTypes from 'prop-types';
 export class TwoWheeler extends React.Component {
 	constructor(props) {
 		super();
-	    this.price = props.price;
-		//this.state = {price:props.price, visitor:'Visitor 2'}
-		this.handleOnClick = this.handleOnClick.bind(this);
+        console.log('Inside Child -> constructor');
+	    //this.price = props.firstPrice;
+		this.state = {price:props.firstPrice};
+		this.handleOnClickPrice = this.handleOnClickPrice.bind(this);
 		this.handleOnClickVisitor = this.handleOnClickVisitor.bind(this);
+        
 	}
 	
-	handleOnClick() {
-        this.price += 100000;
-        console.log('New Price', this.price);
-		//this.setState( { price: this.state.price + 100000});
+	handleOnClickPrice() {
+        console.log('Inside Child -> handleOnClickPrice');
+        //this.price += 100000;
+         this.setState( { price: this.state.price + 100000});
+        // this.state.price = this.state.price + 100000
 	}
 	
 	handleOnClickVisitor() {
 		// this.price = "Rs.100000";
-		this.props.changeVisitor(this.state.visitor);
-		console.log('New Visitor');
+        console.log('Inside Child -> handleOnClickVisitor');
+		this.props.changeVisitor('New Visitor');
+		
 	}
 	
     render() {
+         
+        console.log('Inside Child -> render');
         return ( 
 		    <div  className="alert alert-warning" >
 						<h1 style={{color:'blue'}}> Two Wheeler </h1>
@@ -38,7 +44,7 @@ export class TwoWheeler extends React.Component {
 							</li>
 							
 							<li>
-								<b>Price :</b> {this.price}
+								<b>Price :</b> {this.state.price}
 							</li>
 							<li>
 							     <b>Visitor :</b>  {this.props.visitor}
@@ -48,12 +54,9 @@ export class TwoWheeler extends React.Component {
 						<div className="btn-group btn-group-sm">
 							<button 
                                 style={{margin:'10px 10px 10px 10px'}} 
-                                onClick={this.handleOnClick} 
+                                onClick={this.handleOnClickPrice} 
                                 className="btn btn-primary" >Get New Price</button>
-							<button 
-                                style={{margin:'10px 10px 10px 10px'}} 
-                                onClick={this.props.greet} 
-                                className="btn btn-primary" >Greet Customer</button>
+							 
 							<button 
                                 style={{margin:'10px 10px 10px 10px'}} 
                                 onClick={this.handleOnClickVisitor} 
@@ -65,19 +68,5 @@ export class TwoWheeler extends React.Component {
         );
     } 
 }
-
-TwoWheeler.propTypes = {
-    name: PropTypes.string,
-    specs: PropTypes.object,
-    price: PropTypes.number,
-    children:PropTypes.element.isRequired,
-    greet:PropTypes.func
-};
-
-TwoWheeler.defaultProps = {
-  name: 'Default Name',
-  specs: {manufacturer : "Default Manufacturer Name"},
-  price:10,
-   greet:function() { alert('default func')} 
-};
+ 
 
